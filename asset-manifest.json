@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nttdata/static/css/main.87830a0d.css",
+    "main.js": "/nttdata/static/js/main.6fa4e21d.js",
+    "index.html": "/nttdata/index.html",
+    "main.87830a0d.css.map": "/nttdata/static/css/main.87830a0d.css.map",
+    "main.6fa4e21d.js.map": "/nttdata/static/js/main.6fa4e21d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87830a0d.css",
+    "static/js/main.6fa4e21d.js"
+  ]
+}

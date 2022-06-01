@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Case1 from "./screens/case1";
+import Case2 from "./screens/case2";
+import Case3 from "./screens/case3";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Landing from "./screens/landing";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  async componentDidMount() {}
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="case1" element={<Case1 />} />
+          <Route path="case2" element={<Case2 />} />
+          <Route path="case3" element={<Case3 />} />
+          <Route path="*" element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
+    );
+  }
 }
-
-export default App;

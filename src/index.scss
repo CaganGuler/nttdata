@@ -1,0 +1,113 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$screen-color: rgb(239, 238, 238);
+$border-top-color_1: #4bc8eb;
+$border-top-color_2: #36f372;
+$border-bottom-color_1: #f13a8f;
+$border-bottom-color_2: #fff;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $screen-color;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.8) rotate(-360deg);
+  }
+}
+.spinner-wrapper {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  .spinner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border: 20px solid #162534;
+    border-top-color: $border-top-color_1;
+    border-bottom-color: $border-bottom-color_1;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    .spinner-inner {
+      border-top-color: $border-top-color_2;
+      border-bottom-color: $border-bottom-color_2;
+      animation-duration: 2.5s;
+    }
+  }
+}
+
+.list {
+  padding: 0px 20px;
+  .list-item {
+    background-color: white;
+    margin: 8px 0px;
+    border: 1px solid #dedede;
+  }
+  .list-image {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+  }
+}
+.divider {
+  height: 45px;
+}
+.discount-info {
+  text-decoration: line-through;
+}
+.price-info {
+  color: black;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* We’ll set some colors and center everything. */
+
+#landing-body {
+  background: #4c268f;
+  color: #99eeb4;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text {
+  position: relative;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.text:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(filter-content);
+
+  filter: url(#motion-blur-filter);
+}
+
+svg {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
